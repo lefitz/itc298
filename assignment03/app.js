@@ -5,12 +5,12 @@ console.log('loading app.js');
 
 var utilities = {
     prettyPrint : function(obj, container) {
-        var addData = $('#template').html();
+        var tempHTML = $('#template').html();
         for (var key in obj) {
             var val = obj[key];
-            addData = addData.replace('{{' + key + '}}', val);
+            tempHTML = tempHTML.replace('{{' + key + '}}', val);
         }
-        container.append(addData);
+        container.append(tempHTML);
     },
     megaParse : function(jsonString, container) {
         var parseObj = JSON.parse(jsonString);
