@@ -1,0 +1,117 @@
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/* Typography */
+
+body {
+    color: #ACACAC;
+    padding-bottom: 5em;
+}
+
+h1, h2, h3 {
+    font-family: "Varela Round", Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2em;
+    color: #f93;
+    border-bottom: 1px solid #f93;
+    padding-bottom: 5px;
+    margin: 1em 0 1em 0;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    line-height: 1.3em;
+}
+
+/* Structure */
+
+header {
+    background-color: #F2B8A2;
+    color: #fff;
+    padding: 2em 0;
+    margin-bottom: 2em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper{
+    max-width: 980px;
+    margin:0 auto;
+    padding: 0 20px;
+}
+
+.item {
+    padding-bottom: 0.5em;
+}
+
+.container {
+    overflow: hidden;
+    width: 70%;
+    border: 1px solid #f93;
+    margin: 1em 0;
+    border-radius: 10px;
+    padding: 0 1em 1em 1em;
+
+}
+
+.container:hover {
+    cursor: pointer;
+    border: 1px solid #F2B8A2;
+}
+
+.container:hover h2 {
+    color: #F2B8A2;
+    border-bottom: 1px solid #F2B8A2;
+}
+
+.inner-container img {
+    float: right;
+    margin-left: 20px;
+ }
+
+.bkground {
+    font-family: Times;
+}
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        width: 100%;
+    }
+
+    .inner-container img {
+        float: none;
+        margin: 0 0 20px 0;
+    }
+}

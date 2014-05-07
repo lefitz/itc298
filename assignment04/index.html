@@ -1,0 +1,38 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Candy Info</title>
+    <meta name="viewport" content="width=device-width">
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="candy.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>Candy Info</h1>
+        </div>
+    </header>
+    <div class="wrapper">
+      <div id="items"></div>
+    </div>
+
+    <script id="productTemplate" type="text/x-handlebars-template">
+        <div class="container">
+            <h2>{{Name}}</h2>
+            <div class="inner-container">
+                <img src="images/{{Image}}.jpg" class="photo">
+                <p class="item"><span class="key">Category</span>: <span class="value">{{Category}}</span></p>
+                <p class="item"><span class="key">Flavors</span>: <span class="value">{{Flavors}}</span></p>
+                <p class="item"><span class="key">Distributor</span>: <span class="value">{{Distributor}}</span></p>
+                <p class="item"><span class="key">Price per lb</span>: <span class="value">{{Price}}</span></p>
+                <p class="item"><span class="key">Serving size</span>: <span class="value">{{Serving}}</span></p>
+                <p class="item"><span class="key">Calories per serving</span>: <span class="value">{{Calories}}</span></p>
+                <p class="item"><span class="key">Allergen info</span>: <span class="value">{{Allergens}}</span></p>
+            </div>
+        <div>
+    </script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.2/handlebars.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
