@@ -1,0 +1,46 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Candy Time</title>
+    <meta name="viewport" content="width=device-width">
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="candy.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>Candy Time</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="utilities.display()">View All</a></li>
+                    <li><a href="#" onclick="utilities.displayCart()">Faved Candy <i class="fa fa-heart"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="wrapper">
+      <div id="items"></div>
+    </div>
+
+    <script id="productTemplate" type="text/x-handlebars-template">
+        <div class="container">
+            <h2>{{name}}</h2>
+            <div class="inner-container">
+                <img src="images/{{image}}.jpg" class="photo">
+                <p class="item"><span class="key">Category</span>: <span class="value">{{category}}</span></p>
+                <p class="item"><span class="key">Flavors</span>: <span class="value">{{flavors}}</span></p>
+                <p class="item"><span class="key">Distributor</span>: <span class="value">{{distributor}}</span></p>
+                <p class="item"><span class="key">Price per lb</span>: <span class="value">{{price}}</span></p>
+                <p class="item"><span class="key">Serving size</span>: <span class="value">{{serving}}</span></p>
+                <p class="item"><span class="key">Calories per serving</span>: <span class="value">{{calories}}</span></p>
+                <p class="item"><span class="key">Allergen info</span>: <span class="value">{{allergens}}</span></p>
+            </div>
+            <div id="fave"><a href="#" class="fave" onclick="utilities.addToCart('{{id}}')">Fave <i class="fa fa-heart"></i></a></div>
+        <div>
+    </script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.2/handlebars.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
