@@ -103,6 +103,7 @@ var utilities = {
         
         $('.fave').click(function() {
             $(this).find('i').addClass('heart');
+            return false;
         });
         
     },
